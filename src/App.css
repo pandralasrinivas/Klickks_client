@@ -1,0 +1,230 @@
+:root {
+  --light: #f8f9fa;
+  --dark: #212529;
+  --gray: #6c757d;
+  --gradient-start: #000000;
+  --gradient-end: #383838;
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --glass-bg: rgba(255, 255, 255, 0.25);
+  --glass-border: rgba(255, 255, 255, 0.18);
+  --score-item-bg: #fc2947;
+  --score-item-border: #fe5d5d;
+}
+
+body{
+background: linear-gradient(to right, #000000, #161616);
+  color: #333;
+}
+        
+
+.App {
+  text-align: center;
+}
+
+/* login css */
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+.container{
+    display: flex;
+    max-width: 900px;
+    width: 100%;
+    background: #fff;
+    background: blur(100px);
+    overflow: hidden;
+}
+
+.form {
+    flex: 1;
+    padding: 40px;
+}
+
+.ad-section-signup {
+    flex: 1;
+    background-image: url('https://img.freepik.com/free-photo/top-view-photos-with-camera-lantern_23-2148630189.jpg?semt=ais_hybrid&w=740&q=80');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+.ad-section-login {
+    flex: 1;
+    background-image: url('https://pixelsphotoart.com/cdn/shop/articles/history-of-photography_cdf0a670-61ed-4804-b53a-875c071c4b9b_1024x.webp?v=1747732251');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+
+.logo-login {
+    width: 10px;
+    height: 50px;
+}
+
+
+
+h2 {
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 28px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 50px;
+    font-size: 16px;
+    transition: border 0.3s;
+  font-family: 'Poppins', sans-serif;
+  text-transform: capitalize;
+  font-weight: 600;
+  color: #333;
+}
+
+.input-group input:focus {
+    border-color: var(--gradient-end);
+    outline: none;
+}
+
+.additional-links{
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.additional-links a {
+    color: #777;
+    text-decoration: none;
+    margin: 0 5px;
+    font-weight: 600;
+
+}
+
+.additional-links a:hover {
+  transform: scale(1.1);
+  color: #4361ee;
+  transition: all 0.3s ease;
+}
+button {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(to bottom, var(--gradient-start), var(--gradient-end));
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(to bottom, var(--gradient-end), var(--gradient-start));
+    transition: all 0.3s ease;
+}
+
+.error-message {
+    color: #ff0019;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    margin: 25px 0;
+    color: #777;
+}
+
+.separator::before,
+.separator::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #ddd;
+}
+
+.separator span {
+    padding: 0 10px;
+}
+
+
+.ad-content h3 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.ad-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.feature-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  color: var(--light);
+  padding: 6px;
+}
+
+.feature-line .icon {
+  color: var(--light);   /* your theme color */
+  font-size: 18px;
+}
+
+.dashboard-container {
+    max-width: 900px;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    margin-top: 200px;
+    color: var(--dark);
+    margin-left: 330px;
+    margin-bottom: 100px;
+}
+
+.dashboard-container p{
+    font-size: 18px;
+    color: #777;
+     margin-top: 10px;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .ad-section-login, .ad-section-signup {
+        display: none;
+        margin-bottom: 20px;
+    }
+}
