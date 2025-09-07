@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import API_BASE from './api';
 
 const Register = () => {
   const [username, setUsername] = useState('');
@@ -18,7 +17,7 @@ const Register = () => {
     }
 
     try {
-      const response = await fetch(`${API_BASE}/register`, {
+      const response = await fetch('http://localhost:5000/api/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, email, password })

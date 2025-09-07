@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Cookies from 'js-cookie';
-import API_BASE from './api';
 
 const Login = () => {
   const [username, setUsername] = useState('');
@@ -18,7 +17,7 @@ const Login = () => {
     }
 
     try {
-      const response = await fetch(`${API_BASE}/login`, {
+      const response = await fetch('https://klickks-qtp1.onrender.com/api/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password })
